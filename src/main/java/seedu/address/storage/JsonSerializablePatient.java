@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.CareFlow;
-import seedu.address.model.person.patient.Patient;
+import seedu.address.model.person.Patient;
 import seedu.address.model.readonly.ReadOnlyPatientRecord;
 
 /**
- * An Immutable AddressBook that is serializable to JSON format.
+ * An Immutable Careflow that is serializable to JSON format.
  */
-@JsonRootName(value = "addressbook")
+@JsonRootName(value = "careflow")
 class JsonSerializablePatient {
 
     public static final String MESSAGE_DUPLICATE_PATIENT = "Patients list contains duplicate patient(s).";
@@ -24,7 +24,7 @@ class JsonSerializablePatient {
     private final List<JsonAdaptedPatient> patients = new ArrayList<>();
 
     /**
-     * Constructs a {@code JsonSerializableAddressBook} with the given patients.
+     * Constructs a {@code JsonSerializablePatient} with the given patients.
      */
     @JsonCreator
     public JsonSerializablePatient(@JsonProperty("patients") List<JsonAdaptedPatient> patients) {
@@ -41,7 +41,7 @@ class JsonSerializablePatient {
     }
 
     /**
-     * Converts this address book into the model's {@code AddressBook} object.
+     * Converts this careflow into the model's {@code CareFlow} object.
      *
      * @throws IllegalValueException if there were any data constraints violated.
      */

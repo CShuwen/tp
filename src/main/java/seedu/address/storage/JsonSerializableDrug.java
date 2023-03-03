@@ -11,19 +11,17 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.CareFlow;
 import seedu.address.model.drug.Drug;
-import seedu.address.model.person.Person;
 import seedu.address.model.readonly.ReadOnlyDrugInventory;
-import seedu.address.model.readonly.ReadOnlyPatientRecord;
 
 /**
  * An Immutable AddressBook that is serializable to JSON format.
  */
-@JsonRootName(value = "addressbook")
+@JsonRootName(value = "careflow")
 class JsonSerializableDrug {
 
     public static final String MESSAGE_DUPLICATE_DRUG = "Drugs list contains duplicate drug(s).";
 
-    private final List<JsonnAdaptedDrug> drugs = new ArrayList<>();
+    private final List<JsonAdaptedDrug> drugs = new ArrayList<>();
 
     /**
      * Constructs a {@code JsonSerializableDrug} with the given drugs.
@@ -54,7 +52,7 @@ class JsonSerializableDrug {
             if (careFlow.hasDrug(drug)) {
                 throw new IllegalValueException(MESSAGE_DUPLICATE_DRUG);
             }
-            careFlow.addDrug(Drug);
+            careFlow.addDrug(drug);
         }
         return careFlow;
     }
