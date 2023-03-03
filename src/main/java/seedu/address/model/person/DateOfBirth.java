@@ -22,7 +22,8 @@ public class DateOfBirth {
                     .toArray(DateTimeFormatter[]::new);
     private static final LocalDate minRangeOfBirth = LocalDate.of(1900, 1, 1);
     private static final LocalDate maxRangeOfBirth = LocalDate.now();
-    private final String birthDate;
+
+    public final String birthDate;
 
     /**
      * Constructs a {@code DateOfBirth}.

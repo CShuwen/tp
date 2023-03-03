@@ -11,7 +11,8 @@ public class Gender {
     public static final String MESSAGE_CONSTRAINTS =
             "Gender should only be either female or male, it should not be blank";
     private static final String VALIDATION_REGEX = "f|female|m|male";
-    private final String gender;
+
+    public final String gender;
 
     /**
      * Constructs a {@code Gender}.

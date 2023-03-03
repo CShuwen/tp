@@ -12,7 +12,7 @@ public class Ic {
                     + " and it should be exactly 8 digits and characters long";
 
     private static final String VALIDATION_REGEX = "[a-zA-Z]\\d{7}[a-zA-Z]";
-    private final String ic;
+    public final String ic;
 
     /**
      * Constructs a {@code Ic}.
